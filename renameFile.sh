@@ -23,7 +23,6 @@ do
   season=$(echo $episodeAndSeason | sed 's/S0\{0,1\}\([0-9]*\)E[0-9]*/\1/')
   episode=$(echo $episodeAndSeason | sed 's/S[0-9]*E\([0-9]*\)/\1/')
   format=$(echo $f| sed 's/.*\.\(.*\)/\1/')
-#  echo "$name $episodeAndSeason $season $episode"
   episodeAndSeason="$season x $episode"
   episodeAndSeason=$(echo $episodeAndSeason | sed 's/ //g')
   path="$name/Season $season/$name $episodeAndSeason.$format"
